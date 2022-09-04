@@ -17,13 +17,13 @@ wait(10)
 game.Players.LocalPlayer.Character.Humanoid:MoveTo(Vector3.new(-11245.595703125, 81.93721008300781, -17806.8359375))
 function getPodiumSword()
 	for _,sword in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-		if sword:WaitForChild("Config").Rarity.Value <= 131 and sword:WaitForChild("Config").Nickname.Value ~= "Whitelist" then
+		if sword:WaitForChild("Config").Rarity.Value <= 129 and sword:WaitForChild("Config").Nickname.Value ~= "Whitelist" then
 			game.Players.LocalPlayer.Character.Humanoid:EquipTool(sword)
 			game:GetService("ReplicatedStorage").Framework.RemoteEvent:FireServer(0,"BackpackServer","Drop",{})
 		end
 	end
 	wait(2)
-	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Workspace:WaitForChild("MagmaDungeon"):WaitForChild("EndModule").Parts.Stands["1"].Pad.CFrame
+	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Workspace:WaitForChild("MagmaDungeon"):WaitForChild("EndModule").Parts.Stands["1"].Pad.CFrame*CFrame.new(0,-2,0)
 end
 function getChests()
 	chests = {}
