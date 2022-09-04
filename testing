@@ -1,5 +1,5 @@
 repeat wait() until game:IsLoaded()
-wait(8)
+wait(4)
 local args = {
 		[1] = game:GetService("ReplicatedStorage").Data[game.Players.LocalPlayer.Name].Stats,
 		[2] = workspace:FindFirstChild(game.Players.LocalPlayer.Name.."'s Base"),
@@ -23,7 +23,7 @@ function getPodiumSword()
 		end
 	end
 	wait(2)
-	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Workspace:WaitForChild("MagmaDungeon"):WaitForChild("EndModule").Stands["1"].Pad.CFrame
+	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Workspace:WaitForChild("MagmaDungeon"):WaitForChild("EndModule").Parts.Stands["1"].Pad.CFrame
 end
 function getChests()
 	chests = {}
