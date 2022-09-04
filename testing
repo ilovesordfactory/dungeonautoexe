@@ -1,5 +1,5 @@
 repeat wait() until game:IsLoaded()
-wait(4)
+wait(8)
 local args = {
 		[1] = game:GetService("ReplicatedStorage").Data[game.Players.LocalPlayer.Name].Stats,
 		[2] = workspace:FindFirstChild(game.Players.LocalPlayer.Name.."'s Base"),
@@ -13,7 +13,8 @@ for _,sword in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 	end
 end
 game.Players.LocalPlayer.Character.Humanoid:MoveTo(Vector3.new(-11245.595703125, 81.93721008300781, -17806.8359375))
-
+wait(10)
+game.Players.LocalPlayer.Character.Humanoid:MoveTo(Vector3.new(-11245.595703125, 81.93721008300781, -17806.8359375))
 function getPodiumSword()
 	for _,sword in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 		if sword:WaitForChild("Config").Rarity.Value <= 131 and sword:WaitForChild("Config").Nickname.Value ~= "Whitelist" then
@@ -22,7 +23,7 @@ function getPodiumSword()
 		end
 	end
 	wait(2)
-	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Workspace:WaitForChild("MagmaDungeon"):WaitForChild("EndModule").Pad.Stands["1"].Part.CFrame
+	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Workspace:WaitForChild("MagmaDungeon"):WaitForChild("EndModule").Stands["1"].Pad.CFrame
 end
 function getChests()
 	chests = {}
