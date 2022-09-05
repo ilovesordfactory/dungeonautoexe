@@ -23,7 +23,13 @@ function getPodiumSword()
 		end
 	end
 	wait(2)
-	game:GetService("TweenService"):Create(Character:FindFirstChild("HumanoidRootPart"), TweenInfo.new(2), {CFrame = game.Workspace:WaitForChild("MagmaDungeon"):WaitForChild("EndModule").Parts.Stands["1"].Pad.CFrame}):Play()
+	for _,v in pairs(game.Workspace:WaitForChild("MagmaDungeon"):WaitForChild("EndModule").Parts.Stands:GetDescendants()) do
+        if v:IsA("TextLabel") then
+                if v.Text == game.Players.LocalPlayer.Name then
+                    game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"), TweenInfo.new(2), {CFrame = v.Parent.Parent.Parent.Pad.CFrame}):Play()
+                end 
+        end
+    end
 end
 function getChests()
 	chests = {}
