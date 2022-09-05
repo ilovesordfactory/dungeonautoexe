@@ -206,7 +206,7 @@ function startDungeon()-- does the dungeon process
 		TeleportToPad()
 		wait(13)
 		startFarm(true)
-		wait(32)
+		wait(45)
 		startFarm(false)
 		wait(0.5)
 		teleportToBossArea()
