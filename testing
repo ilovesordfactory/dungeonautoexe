@@ -212,7 +212,7 @@ function startDungeon()-- does the dungeon process
 		teleportToBossArea()
 		wait(0.5)
 		startBossFarm(true)
-		wait(16)
+		wait(18)
 		startBossFarm(false)
 		wait(1)
 		getChests()
